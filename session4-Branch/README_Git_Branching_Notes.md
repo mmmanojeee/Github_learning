@@ -19,7 +19,7 @@ Just like tree branches let new leaves grow without changing the trunk, Git bran
 ---
 ### Why Use Branches? 🤔
 
-- [x] Multiple people can work at the same time.
+- ✅ Multiple people can work at the same time.
 - Mistakes Won't damage the main project.
 - New Features can be tested safely.
 - Easy to organize work.
