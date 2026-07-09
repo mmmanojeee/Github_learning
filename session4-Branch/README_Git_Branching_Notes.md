@@ -70,6 +70,12 @@ git branch new-feature
 git switch new-feature
 
 ```
-
+The git branch command does more than just create and delete branches. If you run it with no arguments, you get a simple listing of your current branches:
+```text
+$ git branch
+  iss53
+* master
+  testing
+```
 
 
