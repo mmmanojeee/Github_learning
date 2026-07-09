@@ -16,6 +16,8 @@ A tree has:
 
 Just like tree branches let new leaves grow without changing the trunk, Git branches let you work on new changes without affecting the main project.
 
+Branches are alternative timelines that allow isolated development.
+
 ---
 ### Why Use Branches? 🤔
 
@@ -61,43 +63,11 @@ Each person works separately.
 When everything works correctly, their changes are merged back into main.
 
 ---
-## What is a Branch?
-Branches are alternative timelines that allow isolated development.
-
-```text
-A --> B --> C
-           \
-            D --> E
-```
-
-## Merge
-```text
-A --> B --> C -------- M
-           \         /
-            D --> E
-```
-
 ## Commands
+
 ```bash
 git branch new-feature
 git switch new-feature
-git merge new-feature
-```
-
-## Branching layout
 
 ```
-redesign
-                    |
-                    F
-                   /
-A---B---C---D-----E
-         \
-          G---H
-          bug-fix
 
-         \
-          I---J
-          new-color-scheme
-
-```
