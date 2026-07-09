@@ -6,8 +6,8 @@ A colorful README with explanations, diagrams, and Git commands.
 ![Version Control](https://img.shields.io/badge/Version-Control-blue?style=for-the-badge)
 
 ---
-## 🌿What is Git Branch?
-#Imagine a Tree 🌳
+## What is Git Branch?
+### Imagine a Tree 🌳
 
 A tree has:
 
