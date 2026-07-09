@@ -26,13 +26,39 @@ Just like tree branches let new leaves grow without changing the trunk, Git bran
 
 #### Simple example:
 
-   #### Main Branch
+#### Main Branch
    
-   The teacher keeps the final project in a folder called:
+The teacher keeps the final project in a folder called:
    
-   ```text
-   main
-   ```
+```text
+main
+```
+#### Real-Life GitHub Example
+
+Let's say a website project has:
+
+```text
+main
+```
+
+A developer creates:
+```text
+login-feature
+```
+Another developer creates:
+```text
+dark-mode
+```
+Structure:
+```text
+main
+ ├── login-feature
+ └── dark-mode
+```
+
+Each person works separately.
+
+When everything works correctly, their changes are merged back into main.
 
 ---
 ## What is a Branch?
