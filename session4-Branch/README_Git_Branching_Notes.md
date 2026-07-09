@@ -24,6 +24,16 @@ Just like tree branches let new leaves grow without changing the trunk, Git bran
 ✅ New Features can be tested safely.<br>
 ✅ Easy to organize work.
 
+#### Simple example:
+
+   #### Main Branch
+   
+   The teacher keeps the final project in a folder called:
+   
+   ```text
+   main
+   ```
+
 ---
 ## What is a Branch?
 Branches are alternative timelines that allow isolated development.
