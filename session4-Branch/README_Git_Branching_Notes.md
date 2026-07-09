@@ -71,6 +71,5 @@ git switch new-feature
 
 ```
 
-<img width="1110" height="513" alt="image" src="https://github.com/user-attachments/assets/9fc80e63-59ee-4573-b9bc-aa17471cf22b" />
 
 
