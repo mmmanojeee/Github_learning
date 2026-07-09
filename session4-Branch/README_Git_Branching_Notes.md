@@ -15,6 +15,7 @@ A tree has:
 **Many smaller branches** growing from it → These are **Git Branches**
 
 Just like tree branches let new leaves grow without changing the trunk, Git branches let you work on new changes without affecting the main project.
+
 ---
 ### Why Use Branches? 🤔
 ✅ Multiple people can work at the same time.
