@@ -7,7 +7,14 @@ A colorful README with explanations, diagrams, and Git commands.
 
 ---
 ## 🌿What is Git Branch?
+#Imagine a Tree 🌳
 
+A tree has:
+
+One main trunk → This is the Main Branch (main or master)
+Many smaller branches growing from it → These are Git Branches
+
+Just like tree branches let new leaves grow without changing the trunk, Git branches let you work on new changes without affecting the main project.
 
 ## What is a Commit?
 A commit is a snapshot of your project.
