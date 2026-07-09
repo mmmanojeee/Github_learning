@@ -23,6 +23,7 @@ Just like tree branches let new leaves grow without changing the trunk, Git bran
 -[x] New Features can be tested safely.
 -[x] Easy to organize work.
 
+---
 ## What is a Branch?
 Branches are alternative timelines that allow isolated development.
 
