@@ -77,5 +77,163 @@ $ git branch
 * master
   testing
 ```
+---
+
+### Example: Branch excercise 
+
+Here are the Git commands for the exercise, along with a description of what each command does.
+
+#### 1. Create the project folder and initialize Git
+```text
+mkdir Patronus
+cd Patronus
+git init
+```
+
+#### Description:
+
+mkdir Patronus → Creates a new directory named Patronus.
+cd Patronus → Moves into the new directory.
+git init → Creates a new Git repository in the current folder.
+2. Create and commit the empty file
+touch patronus.txt
+git add patronus.txt
+git commit -m "add empty patronus file"
+
+
+Description:
+
+touch patronus.txt → Creates an empty file.
+git add patronus.txt → Stages the file for commit.
+git commit -m "add empty patronus file" → Saves the file in Git history.
+3. Create the harry and snape branches
+git branch harry
+git branch snape
+
+
+Description:
+
+Creates two new branches (harry and snape) from the current branch (typically master or main).
+Does not switch to them.
+4. Switch to the harry branch using the "new" command
+git switch harry
+
+
+Description:
+
+Moves your working directory to the harry branch.
+git switch is the newer, more intuitive command for changing branches.
+5. Add Harry's Patronus and commit
+
+Edit patronus.txt, then save the Harry patronus ASCII art.
+
+git add patronus.txt
+git commit -m "add harry's stag patronus"
+
+
+Description:
+
+Stages the modified file.
+Creates a commit containing Harry's patronus.
+6. Move to the snape branch using the "older" command
+git checkout snape
+
+
+Description:
+
+Switches from harry to snape.
+git checkout is the older command traditionally used for branch switching.
+7. Add Snape's Patronus and commit
+
+Replace the contents of patronus.txt with Snape's patronus art.
+
+git add patronus.txt
+git commit -m "add snape's doe patronus"
+
+
+Description:
+
+Stages the changes.
+Creates a commit on the snape branch.
+8. Create the lily branch from snape
+git branch lily
+
+
+Description:
+
+Creates a new branch named lily from the current branch (snape).
+9. Switch to the lily branch
+git switch lily
+
+
+Description:
+
+Changes your current branch to lily.
+10. Update the title and commit
+
+Change:
+
+SNAPE'S PATRONUS
+
+
+to:
+
+LILY'S PATRONUS
+
+
+Then run:
+
+git add patronus.txt
+git commit -m "add lily's doe patronus"
+
+
+Description:
+
+Stages the title change.
+Creates a new commit while keeping the same doe ASCII art.
+11. List all branches
+git branch
+
+
+Description:
+
+Displays all local branches.
+You should see something similar to:
+harry
+* lily
+master
+snape
+
+
+(* indicates the current branch.)
+
+12. Bonus: Delete the snape branch
+
+First switch away from snape if you're on it:
+
+git switch lily
+
+
+Delete the branch:
+
+git branch -d snape
+
+
+Description:
+
+Removes the local snape branch.
+Git safely deletes it only if its changes exist elsewhere.
+
+If Git warns that the branch is not fully merged, force deletion:
+
+git branch -D snape
+
+Optional: Verify Branch History
+git log --oneline --graph --all --decorate
+
+
+Description:
+
+Shows a visual representation of all branches and commits, helping you see the relationships between harry, snape, and lily.
 
 
