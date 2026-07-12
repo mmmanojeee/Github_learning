@@ -9,6 +9,6 @@ Learning Github from Scratch and making notes and uploading in this repository
 <center>
 <table>
   <tr>
-    <td align="center"><a href="session1-Github_installation_windows/README.md"><img src="images/Git.png" width="75px;" height="75px;" alt="Git" /><br /><b>Git</b></a></td>
+    <td align="center"><a href="Git/"><img src="images/Git.png" width="75px;" height="75px;" alt="Git" /><br /><b>Git</b></a></td>
    
   </tr>
