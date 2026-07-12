@@ -91,85 +91,100 @@ git init
 ```
 
 #### Description:
-
+```text
 mkdir Patronus → Creates a new directory named Patronus.
 cd Patronus → Moves into the new directory.
 git init → Creates a new Git repository in the current folder.
-2. Create and commit the empty file
+```
+#### 2. Create and commit the empty file
+```text
 touch patronus.txt
 git add patronus.txt
 git commit -m "add empty patronus file"
+```
 
-
-Description:
-
+#### Description:
+```text
 touch patronus.txt → Creates an empty file.
 git add patronus.txt → Stages the file for commit.
 git commit -m "add empty patronus file" → Saves the file in Git history.
-3. Create the harry and snape branches
+```
+#### 3. Create the harry and snape branches
+```text
 git branch harry
 git branch snape
+```
 
-
-Description:
-
+#### Description:
+```text
 Creates two new branches (harry and snape) from the current branch (typically master or main).
 Does not switch to them.
-4. Switch to the harry branch using the "new" command
+```
+#### 4. Switch to the harry branch using the "new" command
+```text
 git switch harry
+```
 
-
-Description:
-
+#### Description:
+```text
 Moves your working directory to the harry branch.
 git switch is the newer, more intuitive command for changing branches.
-5. Add Harry's Patronus and commit
+```
+#### 5. Add Harry's Patronus and commit
 
 Edit patronus.txt, then save the Harry patronus ASCII art.
-
+```text
 git add patronus.txt
 git commit -m "add harry's stag patronus"
+```
 
-
-Description:
-
+#### Description:
+```text
 Stages the modified file.
 Creates a commit containing Harry's patronus.
-6. Move to the snape branch using the "older" command
+```
+#### 6. Move to the snape branch using the "older" command
+```text
 git checkout snape
+```
 
-
-Description:
-
+#### Description:
+```text
 Switches from harry to snape.
 git checkout is the older command traditionally used for branch switching.
-7. Add Snape's Patronus and commit
+```
+#### 7. Add Snape's Patronus and commit
 
 Replace the contents of patronus.txt with Snape's patronus art.
-
+```text
 git add patronus.txt
 git commit -m "add snape's doe patronus"
+```
 
-
-Description:
-
+#### Description:
+```text
 Stages the changes.
 Creates a commit on the snape branch.
-8. Create the lily branch from snape
+```
+#### 8. Create the lily branch from snape
+```text
 git branch lily
+```
 
-
-Description:
-
+#### Description:
+```text
 Creates a new branch named lily from the current branch (snape).
-9. Switch to the lily branch
+```
+#### 9. Switch to the lily branch
+```text
 git switch lily
+```
 
-
-Description:
-
+#### Description:
+```text
 Changes your current branch to lily.
-10. Update the title and commit
+```
+#### 10. Update the title and commit
 
 Change:
 
