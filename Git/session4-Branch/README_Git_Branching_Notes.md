@@ -103,11 +103,10 @@ git commit -m "add empty patronus file"
 ```
 
 #### Description:
-```text
-touch patronus.txt → Creates an empty file.
-git add patronus.txt → Stages the file for commit.
-git commit -m "add empty patronus file" → Saves the file in Git history.
-```
+- touch patronus.txt → Creates an empty file.
+- git add patronus.txt → Stages the file for commit.
+- git commit -m "add empty patronus file" → Saves the file in Git history.
+
 #### 3. Create the harry and snape branches
 ```text
 git branch harry
@@ -115,20 +114,18 @@ git branch snape
 ```
 
 #### Description:
-```text
-Creates two new branches (harry and snape) from the current branch (typically master or main).
-Does not switch to them.
-```
+- Creates two new branches (harry and snape) from the current branch (typically master or main).
+- Does not switch to them.
+
 #### 4. Switch to the harry branch using the "new" command
 ```text
 git switch harry
 ```
 
 #### Description:
-```text
-Moves your working directory to the harry branch.
-git switch is the newer, more intuitive command for changing branches.
-```
+- Moves your working directory to the harry branch.
+- git switch is the newer, more intuitive command for changing branches.
+
 #### 5. Add Harry's Patronus and commit
 
 Edit patronus.txt, then save the Harry patronus ASCII art.
@@ -138,20 +135,18 @@ git commit -m "add harry's stag patronus"
 ```
 
 #### Description:
-```text
-Stages the modified file.
-Creates a commit containing Harry's patronus.
-```
+- Stages the modified file.
+- Creates a commit containing Harry's patronus.
+
 #### 6. Move to the snape branch using the "older" command
 ```text
 git checkout snape
 ```
 
 #### Description:
-```text
-Switches from harry to snape.
-git checkout is the older command traditionally used for branch switching.
-```
+- Switches from harry to snape.
+- git checkout is the older command traditionally used for branch switching.
+
 #### 7. Add Snape's Patronus and commit
 
 Replace the contents of patronus.txt with Snape's patronus art.
@@ -161,93 +156,91 @@ git commit -m "add snape's doe patronus"
 ```
 
 #### Description:
-```text
-Stages the changes.
-Creates a commit on the snape branch.
-```
+- Stages the changes.
+- Creates a commit on the snape branch.
+
 #### 8. Create the lily branch from snape
 ```text
 git branch lily
 ```
 
 #### Description:
-```text
-Creates a new branch named lily from the current branch (snape).
-```
+- Creates a new branch named lily from the current branch (snape).
+
 #### 9. Switch to the lily branch
 ```text
 git switch lily
 ```
 
 #### Description:
-```text
-Changes your current branch to lily.
-```
+- Changes your current branch to lily.
+
 #### 10. Update the title and commit
 
-Change:
+**Change:**
 
 SNAPE'S PATRONUS
 
-
-to:
+**to:**
 
 LILY'S PATRONUS
 
 
-Then run:
-
+**Then run:**
+```text
 git add patronus.txt
 git commit -m "add lily's doe patronus"
+```
 
-
-Description:
-
-Stages the title change.
-Creates a new commit while keeping the same doe ASCII art.
-11. List all branches
+#### Description:
+- Stages the title change.
+- Creates a new commit while keeping the same doe ASCII art.
+  
+#### 11. List all branches
+```text
 git branch
+```
 
+#### Description:
 
-Description:
-
-Displays all local branches.
-You should see something similar to:
+- Displays all local branches.
+- You should see something similar to:
+```text
 harry
 * lily
 master
 snape
-
+```
 
 (* indicates the current branch.)
 
-12. Bonus: Delete the snape branch
+#### 12. Bonus: Delete the snape branch
 
 First switch away from snape if you're on it:
-
+```text
 git switch lily
-
+```
 
 Delete the branch:
-
+```text
 git branch -d snape
+```
 
+#### Description:
+- Removes the local snape branch.
+- Git safely deletes it only if its changes exist elsewhere.
 
-Description:
-
-Removes the local snape branch.
-Git safely deletes it only if its changes exist elsewhere.
-
-If Git warns that the branch is not fully merged, force deletion:
-
+* If Git warns that the branch is not fully merged, force deletion:
+```text
 git branch -D snape
-
+```
 Optional: Verify Branch History
+```text
 git log --oneline --graph --all --decorate
+```
 
+#### Description:
 
-Description:
-
-Shows a visual representation of all branches and commits, helping you see the relationships between harry, snape, and lily.
+- Shows a visual representation of all branches and commits, helping you see the relationships between harry, snape, and lily.
 
 
