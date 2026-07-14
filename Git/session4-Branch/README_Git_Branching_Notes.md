@@ -4,6 +4,7 @@ A colorful README with explanations, diagrams, and Git commands.
 
 ![Git](https://img.shields.io/badge/Git-Branching-orange?style=for-the-badge&logo=git)
 ![Version Control](https://img.shields.io/badge/Version-Control-blue?style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-delere-Branching-yellow?style=for-the-badge)
 
 ---
 ## What is Git Branch?
