@@ -91,11 +91,10 @@ git init
 ```
 
 #### Description:
-```text
-mkdir Patronus → Creates a new directory named Patronus.
-cd Patronus → Moves into the new directory.
-git init → Creates a new Git repository in the current folder.
-```
+- mkdir Patronus → Creates a new directory named Patronus.
+- cd Patronus → Moves into the new directory.
+- git init → Creates a new Git repository in the current folder.
+
 #### 2. Create and commit the empty file
 ```text
 touch patronus.txt
