@@ -117,59 +117,66 @@ print("Welcome")
 
 Both changes are now in main.
 
-Types of Merge
-1. Fast-Forward Merge
+**Types of Merge**
+
+**1. Fast-Forward Merge**
 
 When the main branch has not changed after creating the new branch.
 
 Before:
-
+``` Git
 A --- B (main)
         \
          C --- D (feature)
-
+```
 
 After merge:
 
+``` Git
+
 A --- B --- C --- D (main)
 
+```
 
 Git simply moves the pointer forward.
 
-2. Three-Way Merge
+**2. Three-Way Merge**
 
 When both branches have new work.
 
 Before:
-
+``` Git
        C (main)
       /
 A --- B
       \
        D (feature)
-
+```
 
 After merge:
 
+``` Git
        C
       / \
 A --- B   M
       \ /
        D
-
+```
 
 Git creates a special merge commit M.
 
-What is a Merge Conflict?
+**What is a Merge Conflict?**
 
 Sometimes two people change the same line of a file.
 
+``` Git
 main branch
 name = "Ravi"
 
 feature branch
 name = "Priya"
 
+```
 
 Git doesn't know which change is correct.
 
@@ -177,6 +184,7 @@ This creates a merge conflict.
 
 Conflict Example
 
+``` Git
 Git shows:
 
 <<<<<<< HEAD
@@ -185,17 +193,19 @@ name = "Ravi"
 name = "Priya"
 >>>>>>> feature
 
+```
 
 You must manually choose:
 
+``` Git
 name = "Ravi and Priya"
+```
 
-
+``` Git
 Then:
-
 git add .
 git commit
-
+```
 
 Conflict resolved!
 
@@ -203,12 +213,14 @@ Real Life Analogy
 
 Think of branches as different roads.
 
+``` Git
            Road A
           /
 Start ----
           \
            Road B
 
+```
 
 People travel on different roads and later return to one main road.
 
@@ -226,15 +238,19 @@ Why Use Git Merge?
 
 ✅ Essential for teamwork
 
-Quick Summary
+### Quick Summary
+
 Branch = Separate workspace.
 Merge = Combine one branch into another.
+
+``` Git
 Command:
 git merge branch-name
-
-Git automatically merges most changes.
-If the same line is changed in both branches, a merge conflict occurs.
-After resolving conflicts, commit the changes.
-One-Line Definition
+```
+- Git automatically merges most changes.
+- If the same line is changed in both branches, a merge conflict occurs.
+- After resolving conflicts, commit the changes.
+  
+**One-Line Definition**
 
 Git Merge is the process of combining changes from one branch into another branch so that all work becomes part of a single project. 🚀
