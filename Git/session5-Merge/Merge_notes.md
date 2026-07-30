@@ -254,3 +254,103 @@ git merge branch-name
 **One-Line Definition**
 
 Git Merge is the process of combining changes from one branch into another branch so that all work becomes part of a single project. 🚀
+
+
+# Git Branch Cheat Sheet
+
+## Viewing Branches
+| Command | Description |
+|---|---|
+| `git branch` | List local branches (current marked `*`) |
+| `git branch -a` | List all branches (local + remote) |
+| `git branch -r` | List remote-tracking branches only |
+| `git branch -v` | List branches with last commit info |
+| `git branch -vv` | List branches with upstream tracking info |
+
+## Creating Branches
+| Command | Description |
+|---|---|
+| `git branch <name>` | Create branch from current HEAD (no switch) |
+| `git branch <name> <start-point>` | Create branch from specific commit/tag/branch |
+| `git checkout -b <name>` | Create and switch to new branch |
+| `git switch -c <name>` | Same as above (newer syntax) |
+
+## Switching Branches
+| Command | Description |
+|---|---|
+| `git checkout <name>` | Switch to existing branch |
+| `git switch <name>` | Same, newer/cleaner syntax |
+
+## Renaming Branches
+| Command | Description |
+|---|---|
+| `git branch -m <new-name>` | Rename current branch |
+| `git branch -m <old> <new>` | Rename a specific branch |
+
+## Deleting Branches
+| Command | Description |
+|---|---|
+| `git branch -d <name>` | Delete branch (safe, only if merged) |
+| `git branch -D <name>` | Force delete branch (even unmerged) |
+| `git push origin --delete <name>` | Delete branch on remote |
+
+## Tracking / Upstream
+| Command | Description |
+|---|---|
+| `git branch -u <remote>/<branch>` | Set upstream for current branch |
+| `git branch --set-upstream-to=<remote>/<branch>` | Same, explicit form |
+| `git branch --unset-upstream` | Remove upstream tracking |
+
+## Merged Status
+| Command | Description |
+|---|---|
+| `git branch --merged` | Branches already merged into current |
+| `git branch --no-merged` | Branches NOT yet merged into current |
+
+## Copying
+| Command | Description |
+|---|---|
+| `git branch -c <new-name>` | Copy current branch to new name |
+
+---
+
+## Typical Workflow: Feature Branch → Merge → Delete
+
+```bash
+# 1. Make sure main is up to date
+git checkout main
+git pull origin main
+
+# 2. Create and switch to a feature branch
+git checkout -b feature/login-page
+
+# 3. Work on it — stage and commit changes
+git add .
+git commit -m "Add login page UI"
+
+# 4. Push the feature branch to remote (first time, sets upstream)
+git push -u origin feature/login-page
+
+# 5. (Optional) Keep it updated with main while working
+git checkout main
+git pull origin main
+git checkout feature/login-page
+git merge main
+
+# 6. Once done, switch to main and merge the feature in
+git checkout main
+git pull origin main
+git merge feature/login-page
+
+# 7. Push the updated main
+git push origin main
+
+# 8. Delete the feature branch locally
+git branch -d feature/login-page
+
+# 9. Delete the feature branch on remote
+git push origin --delete feature/login-page
+```
+
+**Note:** Step 6 assumes a simple merge. In team settings, this is often done via a Pull Request (GitHub/GitLab/Bitbucket) instead of a direct local merge — the steps before and after (branch, commit, push, delete) stay the same either way.
+
