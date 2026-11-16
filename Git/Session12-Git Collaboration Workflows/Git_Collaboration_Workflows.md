@@ -70,19 +70,19 @@ Fork + Pull Request Workflow
 What Is It?
 
 Everyone works directly on the same branch.
-
+```
 main
-
+```
 
 or
-
+```
 master
-
+```
 
 No feature branches are created.
 
 All developers commit directly to main.
-
+```
 Example
 
 Team Members:
@@ -90,43 +90,43 @@ Team Members:
 Pamela
 David
 Forrest
-
+```
 Initial Repository:
-
+```
 main
  |
  A
-
+```
 
 Everyone clones this repository.
 
 Scenario
 Forrest Adds Changes
+```
 main
  |
  A → B → C
-
-
+```
 Pushes code:
-
+```
 git push origin main
-
+```
 
 ✅ Success
 
 Pamela Also Made Changes
 
 Pamela's local repository:
-
+```
 main
  |
  A → D
 
-
+```
 She tries:
-
+```
 git push origin main
-
+```
 
 ❌ Push Rejected
 
@@ -142,14 +142,14 @@ Pamela doesn't have commits B and C.
 Solution
 
 First pull latest changes:
-
+```
 git pull origin main
-
+```
 
 Then push again:
-
+```
 git push origin main
-
+```
 
 ✅ Works
 
@@ -157,11 +157,11 @@ git push origin main
 1. Too Many Merges
 
 Everyone continuously runs:
-
+```
 git pull
 git merge
 git push
-
+```
 2. More Merge Conflicts
 
 More developers = More conflicts
@@ -174,10 +174,10 @@ Conflict Count ↑
 You want to try something risky.
 
 Only option:
-
+```
 main branch
 
-
+```
 Dangerous 😬
 
 4. Broken Code Affects Everyone
@@ -221,12 +221,12 @@ Example
 David wants to create a Dark Theme.
 
 Create branch:
-
+```shell
 git switch -c dark-theme
 
-
+```
 Repository becomes:
-
+```
 main
  |
  A
@@ -234,7 +234,7 @@ main
 dark-theme
  |
  A → B → C
-
+```
 
 Work happens only inside:
 
@@ -247,9 +247,9 @@ David isn't finished.
 Needs help from Pamela.
 
 Push branch:
-
+```
 git push origin dark-theme
-
+```
 
 ✅ Safe
 
@@ -258,21 +258,21 @@ Main branch remains untouched.
 Pamela Helps
 
 Get latest branches:
-
+``` bash
 git fetch
-
+```
 
 Switch:
-
+``` bash
 git switch dark-theme
-
+```
 
 Make changes:
-
+```bash
 git add .
 git commit -m "Update theme styles"
 git push origin dark-theme
-
+```
 
 ✅ Collaboration achieved
 
@@ -282,21 +282,27 @@ Benefit	Explanation✅ Safe Collaboration	Many developers can work simultaneousl
 ✅ Easy Testing	Test feature separately
 ✅ Fewer Conflicts	Merge only after completion
 ✅ Easy Rollback	Remove problematic branch easily
+
 3️⃣ Creating a Feature Branch
+
 Step 1: Update Main Branch
+```bash
 git switch main
 git pull origin main
-
+```
 Step 2: Create New Branch
+```bash
 git switch -c feature/navbar
-
+```
 Step 3: Do Development
+```bash
 git add .
 git commit -m "Add Navbar"
-
+```
 Step 4: Push Branch
+```bash
 git push origin feature/navbar
-
+```
 
 ✅ Branch available on GitHub
 
@@ -305,7 +311,7 @@ git push origin feature/navbar
 Feature is complete.
 
 Current situation:
-
+```
 main
  |
  A
@@ -314,34 +320,34 @@ navbar
  |
  A → B → C
 
-
+```
 Goal:
-
+```
 main
  |
  A → B → C
-
-Steps
+```
+#### Steps
 
 Switch to Main:
-
+```bash
 git switch main
-
+```
 
 Pull latest changes:
-
+```bash
 git pull origin main
-
+```
 
 Merge:
-
+```bash
 git merge navbar
-
+```
 
 Push:
-
+```bash
 git push origin main
-
+```
 
 ✅ Feature merged
 
@@ -349,7 +355,7 @@ git push origin main
 Most Important Git Concept 🔥
 What is a Pull Request?
 
-A Pull Request (PR) is:
+##### A Pull Request (PR) is:
 
 "A request to merge my code after someone reviews it."
 
@@ -377,14 +383,14 @@ Merge
 Real Workflow
 
 Push Branch:
-
+``` bash
 git push origin feature/navbar
-
+```
 
 Go to GitHub
 
 Click:
-
+```
 Compare & Pull Request
 
 Sample PR
@@ -393,7 +399,7 @@ Add Responsive Bootstrap Navbar
 
 Description
 Added responsive navigation bar.
-
+```
 Please review.
 
 👀 Reviewer Actions
@@ -413,7 +419,7 @@ Need improvements.
 Changes not required.
 
 6️⃣ Merge Conflicts
-What Is a Conflict?
+##### What Is a Conflict?
 
 Occurs when two developers modify the same code.
 
@@ -438,23 +444,23 @@ How to Resolve?
 Step 1
 
 Fetch latest updates
-
+```bash
 git fetch origin
-
+```
 Step 2
 
 Switch branch
-
+```bash
 git switch feature-heading
-
+```
 Step 3
 
 Merge latest main
-
+```bash
 git merge main
-
+```
 Git Shows Conflict
-<<<<<<< HEAD
+<<<<<<< HEAD (current change)
 
 Hello Everyone
 
@@ -462,18 +468,20 @@ Hello Everyone
 
 Hello World
 
->>>>>>> main
+>>>>>>> main (incoming change)
 
 Developer Chooses Final Result
 Hello World Everyone
 
 Commit Resolution
+```bash
 git add .
 git commit -m "Resolve merge conflict"
-
+```
 Push Again
+```bash
 git push origin feature-heading
-
+```
 
 ✅ Conflict resolved
 
@@ -484,9 +492,9 @@ Used in almost every company 🏢
 Why?
 
 Without protection:
-
+```bash
 git push origin main
-
+```
 
 Anyone could change production code.
 
@@ -542,7 +550,7 @@ Production
 🏆 Standard Industry Process
 
 8️⃣ Forking
-What Is a Fork?
+##### What Is a Fork?
 
 A Fork is:
 
@@ -602,21 +610,23 @@ react
 manoj/react
 
 Step 2: Clone Fork
+```bash
 git clone YOUR_FORK_URL
-
+```
 
 Example:
-
+```bash
 git clone https://github.com/manoj/react.git
-
+```
 Step 3: Add Upstream Repository
+```bash
 git remote add upstream ORIGINAL_REPO_URL
-
+```
 
 Example:
-
+```bash
 git remote add upstream https://github.com/facebook/react.git
-
+```
 Why Upstream?
 
 Now you have two remotes:
@@ -630,8 +640,9 @@ upstream
 Original Repository
 
 Verify Remotes
+```bash
 git remote -v
-
+```
 
 Output:
 
@@ -639,16 +650,20 @@ origin     your-fork-url
 upstream   original-project-url
 
 Step 4: Create Branch
+```bash
 git switch -c bug-fix
-
+```
 Step 5: Make Changes
+```bash
 git add .
 git commit -m "Fix issue"
-
+```
 Step 6: Push Changes
+```bash
 git push origin bug-fix
-
+```
 Step 7: Create Pull Request
+
 Your Fork
       ↓
 Original Repository
@@ -672,34 +687,45 @@ Your code becomes part of the original project.
 This is how open-source contributions work.
 
 🧠 Most Important Commands to Memorize
+
 Create Branch
+```bash
 git switch -c feature-name
-
+```
 Switch Branch
+```bash
 git switch branch-name
-
+```
 Push Branch
+```bash
 git push origin feature-name
-
+```
 Fetch Changes
+```bash
 git fetch
-
+```
 Merge Branch
+```bash
 git merge branch-name
-
+```
 Delete Branch
+```bash
 git branch -D branch-name
-
+```
 Show Remotes
+```bash
 git remote -v
-
+```
 Add Upstream
+```bash
 git remote add upstream URL
-
+```
 Pull from Upstream
+```bash
 git pull upstream main
-
+```
 🎯 Interview Questions
+
 Q1: Why Use Feature Branches?
 Answer
 Main branch remains stable
@@ -720,10 +746,12 @@ Forking means creating a personal copy of another repository on GitHub.
 Q4: Difference Between Fork and Clone?
 Answer:
 
-Fork	CloneGitHub Copy	Local Copy
-Lives on GitHub	Lives on PC
-Creates New Repository	Creates Working Directory
-Used for Open Source	Used for Development
+| 🔀 Fork | 📥 Clone |
+|----------|----------|
+| GitHub Copy | Local Copy |
+| Lives on GitHub | Lives on PC |
+| Creates New Repository | Creates Working Directory |
+| Used for Open Source | Used for Development |
 
 🎓 Real Company Workflow (Most Common)
 1. Pull Latest Main
